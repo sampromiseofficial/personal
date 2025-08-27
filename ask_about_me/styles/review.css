@@ -1,0 +1,170 @@
+/* Base Reset and Defaults */
+:root {
+  --primary-color: #1e90ff;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --dark-bg: #121212;
+  --dark-text: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;  
+}
+
+h3 {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar img {
+  width: 100%;
+  max-width: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--bg-color);
+}
+
+a:hover {
+  color: var(--dark-bg);
+  background-color: var(--bg-color);
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--bg-color);
+}
+
+#menu-toggle:hover {
+  color: var(--dark-bg);
+  background-color: var(--bg-color);
+}
+
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#themeToggle {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#themeToggle:hover {
+  color: var(--dark-bg);
+  background-color: var(--bg-color);
+}
+
+.socialmedia {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  gap: 30px;
+}
+
+section {
+  margin-top: 223px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary-color);
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark .card {
+  background-color: #1e1e1e;
+  color: var(--dark-text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  /*loading: lazy;*/
+}
+
+.welcome-note p {
+  text-align: justify;
+}
