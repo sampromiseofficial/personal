@@ -3,61 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> about me  | oni samson promise Personal Portfolio</title>
+  <title> homepage  | oni samson promise Personal Portfolio</title>
   <meta name="description" content="Personal Portfolio of oni samson promise - Developer & Designer">
   <meta name="author" content="Oni Samson Promise">
   <link rel="stylesheet" href="styles/home.css">
   <link rel="stylesheet" href="styles/home-small.css">
-  <script defer src="scripts/about.js"></script>
+  <script defer src="scripts/home.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html">
-                <img src="images/my_profile_portfolio_logo_new.webp" alt="Rafting company logo">
-            </a>
-            <h1>Oni Samson Promise</h1>
-            <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">
+        <img src="images/my_profile_portfolio_logo_new.webp" alt="logo">
+      </a>
+      <h1>Oni Samson Promise</h1>
+      <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
     <main>
         <section class="hero">
-            <h1>About Me</h1>
-            <p>Hello! I'm PsalmProxy, a passionate web developer and designer.</p>
-        </section>
-        <section class="welcome-note">
-            <img src="images/web_pics_2.webp" alt="myself">
-            <p></p>
+            <h1>My Blog</h1>
+            <p>Insights, tutorials, and thoughts about web development and tech.</p>
         </section>
         
-        <section class="about-content">
-            <h2>Background</h2>
-            <p>I specialize in creating dynamic, responsive websites using modern web technologies like HTML, CSS, and
-                JavaScript. With a background in both design and development, I bring a well-rounded perspective to web projects.
-            </p>
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5, CSS3, JavaScript</li>
-                <li>Responsive Web Design</li>
-                <li>UI/UX Principles</li>
-                <li>DOM Manipulation and APIs</li>
-                <li>Version Control with Git</li>
-            </ul>
-            <h2>Hobbies</h2>
-            <p>When I'm not coding, I enjoy reading tech blogs, and contributing to open-source projects.</p>
+        <section class="blog-posts">
+            <article class="card">
+                <h2>Getting Started with JavaScript</h2>
+                <p>Learn the basics of JavaScript: syntax, variables, and DOM manipulation.</p>
+            </article>
+            <article class="card">
+                <h2>Why Responsive Design Matters</h2>
+                <p>Explore the importance of building websites that look great on every device.</p>
+            </article>
+            <article class="card">
+                <h2>Optimizing Your Website</h2>
+                <p>Tips and tools for reducing load time and improving performance.</p>
+            </article>
         </section>
+        
         <section>
-            <h2>social platform links</h2>
+            <h2>Social Platform Links</h2>
             <nav class="socialmedia">
                 <a href="http://facebook.com/psalmproxy1010?mibextid=ZbWKwL">
                     <img src="images/facebook_image.webp" alt="facebook">
@@ -86,9 +82,10 @@
             </nav>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="year"></span> Oni Samson Promise </p>
-        <p id="lastModified"></p>
-    </footer>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Oni Samson Promise </p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
