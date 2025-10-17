@@ -1,0 +1,138 @@
+/* =======================
+   DESKTOP VIEW (64+)
+======================= */
+@media only screen and (min-width: 64rem) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  
+  body {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  #primary-nav ul {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    margin-top: 0;
+  }
+
+  /****main content****/
+  main {
+    padding: 4rem 3rem;
+  }
+
+  /* Default grid layout before any button click */
+  #service {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* When Grid button is clicked */
+  #service.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* When List button is clicked */
+  #service.list {
+    display: block;
+  }
+
+  .service-card {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-card img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+  }
+
+  main h1 {
+    font-size: 2.2rem;
+  }
+
+  .service-card h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Show menu only on large view */
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .menu button {
+    background-color: #222;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+
+  .menu button:hover {
+    background-color: #444;
+  }
+
+     footer {
+  background-color: #27187E; /* deep indigo */
+  color: #F1F2F6; /* light gray/white text */
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+footer .social a img {
+  filter: brightness(0) invert(1); /* makes icons white */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+footer .social a:hover img {
+  transform: scale(1.2);
+  filter: brightness(0) invert(0.7);
+}
+
+footer .foot {
+  line-height: 1.6;
+}
+
+footer .foot h3 {
+  color: #AEB8FE;
+  margin-bottom: 0.5rem;
+}
+
+footer .foot a {
+  color: #758BFD;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer .foot a:hover {
+  color: #FF8600; /* orange accent */
+}
+
+}

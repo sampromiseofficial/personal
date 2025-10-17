@@ -1,0 +1,245 @@
+/* ====================================
+   SMALL VIEW (default: mobile-first)
+==================================== */
+:root {
+  --primary-color: #27187e;
+  --text-color1: #758bfd; 
+  --text-color2: #f1f2f6; 
+  --background1-color: #aeb8fe;
+  --background2-color: #ff8600;
+  --heading-font: "Roboto", sans-serif;
+  --body-font: "Poppins", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--text-color1);
+  background-color: var(--text-color2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--text-color2);
+  padding: 0.75rem 1.25rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn:hover { background: var(--text-color1); }
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.btn.ghost:hover {
+  background: var(--primary-color);
+  color: var(--text-color2);
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--primary-color);
+  color: var(--text-color2);
+  padding: 1rem;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+header span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ---------- Navigation ---------- */
+nav ul {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--text-color1);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: var(--text-color2);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav .current a {
+  background: var(--primary-color);
+}
+
+/* ---------- Hamburger Menu ---------- */
+.hamburger {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-color2);
+  cursor: pointer;
+}
+.hamburger::before { content: "\2630"; }
+.hamburger.show::before { content: "\00d7"; }
+
+#primary-nav ul.show { display: flex; }
+
+/* ---------- Main Content ---------- */
+main {
+  background-color: var(--text-color2);
+  color: var(--text-color1);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+/* ---------- Business Cards ---------- */
+.business-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.business-groups div {
+  background-color: var(--text-color2);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.business-groups div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.business-groups img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.business-groups h2 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.business-groups address {
+  font-style: normal;
+  color: var(--text-color1);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.business-groups p {
+  font-size: 0.95rem;
+  color: var(--background1-color);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.business-groups a {
+  display: inline-block;
+  background-color: var(--background2-color);
+  color: var(--text-color2);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.business-groups a:hover { background-color: var(--text-color1); }
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color2);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: var(--body-font);
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+footer .social a img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+footer .social a:hover img {
+  transform: scale(1.2);
+  filter: brightness(0) invert(0.7);
+}
+
+footer .foot {
+  line-height: 1.6;
+}
+
+footer .foot h3 {
+  color: var(--background1-color);
+  margin-bottom: 0.5rem;
+}
+
+footer .foot a {
+  color: var(--text-color1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer .foot a:hover {
+  color: var(--background2-color);
+}
