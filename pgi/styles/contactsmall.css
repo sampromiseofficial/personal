@@ -217,6 +217,35 @@ button {
   font-size: larger;  
 }
 
+/* ========== Form Thank You Section ========== */
+.thank-result {
+  padding: 1.5rem;
+  margin: 2rem 1rem;
+  text-align: center;
+  background-color: var(--text-color2); /* optional */
+  border-radius: 10px;    /* optional */
+  box-shadow: 0 4px 10px var(--primary-color)(0, 0, 0, 0.1); /* optional */
+}
+
+.thank-result:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--primary-color)(0, 0, 0, 0.15);
+}
+
+.thank-result h4 {
+  font-size: 1.25rem;
+}
+
+#results {
+  background-color: var(--text-color2);
+  border: 1px solid var(--text-color1);
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 /* =======================
    FOOTER (Using Root Colors)
 ======================= */
